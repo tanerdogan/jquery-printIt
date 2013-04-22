@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <script type="text/javascript" src="jquery-1.8.0.min.js"></script>   	
+	<script type="text/javascript" src="jquery.printIt.js"></script>	
+	
+	<style>
+	body {
+		width:960px;		
+		margin: 0 auto;
+		padding: 0;
+		text-align:center;
+	}
+	p {
+		float: left;
+		width: 280px;
+		height: 30px;
+		padding: 8px;
+		margin: 10px;
+		background: #cae8ea;
+		border: 1px solid #c2c2c2;	
+	}
+	</style>
+</head>
+<body>
+
+<p>
+This is #1
+</p>
+
+<div class="printIt">
+	<p>
+	This is #2	
+	</p>
+</div>
+
+<p>
+This is #3
+</p>
+
+<br style="clear:both" />
+
+<a href="#">PrintIt DIV#2</a>
+
+
+<script>
+	  $(document).ready(function() {
+		 $("a").click(function(){	 
+			 $(".printIt").printIt({		 
+				 cssURI: "print-style.css"
+			 });
+		 });
+	 });
+</script>
+
+</body>
+</html>
